@@ -6,11 +6,9 @@ using System.Threading.Tasks;
 
 namespace GeneticsLib
 {
-    interface INeuron
+    interface ILayer
     {
-        double Sum { set; get; }
-        double Reply { set; get; }
-        IFunction Function { set; get; }
+        List<INeuron> Neurons { set; get; }
         void Fire();
         void Nullify();
     }

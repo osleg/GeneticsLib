@@ -43,8 +43,12 @@
     <Compile Include="Enums\NeuronType.cs" />
     <Compile Include="Functions\FunctionNone.cs" />
     <Compile Include="Functions\FunctionSigmoid.cs" />
+    <Compile Include="Globals.cs" />
+    <Compile Include="Interfaces\ILayer.cs" />
     <Compile Include="Interfaces\IFunction.cs" />
     <Compile Include="Interfaces\INeuron.cs" />
+    <Compile Include="Interfaces\ISynapse.cs" />
+    <Compile Include="LayerInput.cs" />
     <Compile Include="NeuronInput.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
