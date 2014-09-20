@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace GeneticsLib
 {
-    interface ISynapse
+    /// <summary>
+    /// the connection between the neurons
+    /// </summary>
+    public interface ISynapse
     {
 
     }

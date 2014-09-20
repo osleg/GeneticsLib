@@ -6,11 +6,27 @@ using System.Threading.Tasks;
 
 namespace GeneticsLib.Gnome
 {
-    interface IGene
+    /// <summary>
+    /// this interface represents various type of genes to be used
+    /// </summary>
+    public interface IGene
     {
+        /// <summary>
+        /// this is the gene value
+        /// </summary>
         object gene { set; get; }
+        /// <summary>
+        /// randomizes the value
+        /// </summary>
         void Randomize();
+        /// <summary>
+        /// sets the value to zero
+        /// </summary>
         void Nullify();
+        /// <summary>
+        /// turns the value to number that can be used in math
+        /// </summary>
+        /// <returns></returns>
         dynamic ToNumber();
     }
 }

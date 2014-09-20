@@ -13,6 +13,9 @@ namespace Tester
         
         static void Main(string[] args)
         {
+            Being a = new Being();
+            Being b = new Being();
+            b = a.Clone();
             Console.ReadKey();
         }
     }

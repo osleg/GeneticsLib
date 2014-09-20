@@ -32,6 +32,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -39,6 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Being.cs" />
     <Compile Include="Being\Enums\FunctionType.cs" />
     <Compile Include="Being\Enums\NeuronType.cs" />
     <Compile Include="Being\Functions\FunctionNone.cs" />
@@ -53,9 +55,11 @@
     <Compile Include="Being\NeuronHidden.cs" />
     <Compile Include="Being\NeuronInput.cs" />
     <Compile Include="Being\NeuronOutput.cs" />
+    <Compile Include="Gnome\Genome.cs" />
     <Compile Include="Gnome\GnomeEnums.cs" />
     <Compile Include="Gnome\GeneInteger.cs" />
     <Compile Include="Gnome\IGene.cs" />
+    <Compile Include="Being\LayerOutput.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
