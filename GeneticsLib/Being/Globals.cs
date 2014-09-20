@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace GeneticsLib
 {
-    static class Globals
+    public static class Globals
     {
-        static Random Rand = new Random();
+        public static Random Rand = new Random();
     }
 }

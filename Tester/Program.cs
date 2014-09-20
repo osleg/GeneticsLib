@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using GeneticsLib;
+using GeneticsLib.Gnome;
 
 namespace Tester
 {
@@ -12,9 +13,7 @@ namespace Tester
         
         static void Main(string[] args)
         {
-            
             Console.ReadKey();
-
         }
     }
 }
