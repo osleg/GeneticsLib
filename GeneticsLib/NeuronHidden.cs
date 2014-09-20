@@ -6,16 +6,15 @@ using System.Threading.Tasks;
 
 namespace GeneticsLib
 {
-    class NeuronInput:INeuron
-
+    class NeuronHidden:INeuron
     {
         public double Sum { set; get; }
 
         public double Reply { set; get; }
 
-        public IFunction Function { get; set; }
+        public IFunction Function { set; get; }
 
-        public NeuronInput(FunctionType Func)
+        public NeuronHidden(FunctionType Func)
         {
             Sum = 0;
             Reply = 0;
@@ -32,11 +31,11 @@ namespace GeneticsLib
                     break;
             }
         }
-        public NeuronInput()
+        public NeuronHidden()
         {
             Sum = 0;
             Reply = 0;
-            Function = new FunctionNone();
+            Function = new FunctionSigmoid();
         }
 
         public void Fire()

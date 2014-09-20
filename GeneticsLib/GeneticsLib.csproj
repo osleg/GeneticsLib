@@ -48,7 +48,9 @@
     <Compile Include="Interfaces\IFunction.cs" />
     <Compile Include="Interfaces\INeuron.cs" />
     <Compile Include="Interfaces\ISynapse.cs" />
+    <Compile Include="LayerHidden.cs" />
     <Compile Include="LayerInput.cs" />
+    <Compile Include="NeuronHidden.cs" />
     <Compile Include="NeuronInput.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
