@@ -11,6 +11,9 @@ namespace GeneticsLib
     /// </summary>
     public interface ISynapse
     {
-
+        int Position { get; set; }
+        int Source { set; get; }
+        int Destination { get; set; }
+        dynamic Number { get; set; }
     }
 }

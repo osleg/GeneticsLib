@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace GeneticsLib
 {
+    [Serializable]
     class NeuronHidden:INeuron
     {
         public double Sum { set; get; }

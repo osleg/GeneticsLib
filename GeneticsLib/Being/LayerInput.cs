@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace GeneticsLib
 {
+    [Serializable]
     class LayerInput:ILayer
     {
         private List<INeuron> neurons = new List<INeuron>();
@@ -20,7 +21,7 @@ namespace GeneticsLib
                 neurons = value;
             }
         }
-        LayerInput(int size)
+        public LayerInput(int size)
         {
             for (int i = 0; i < size; i++)
             {

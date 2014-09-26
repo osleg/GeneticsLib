@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace GeneticsLib
 {
+    [Serializable]
     class FunctionNone:IFunction
     {
         public double Calculate(double Sum)

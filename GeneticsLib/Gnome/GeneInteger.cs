@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace GeneticsLib.Gnome
 {
+    [Serializable]
     class GeneInteger:IGene
     {
 

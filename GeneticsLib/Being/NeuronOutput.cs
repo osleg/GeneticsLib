@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace GeneticsLib
 {
+    [Serializable]
     class NeuronOutput:INeuron
     {
         public GeneticsLib.Gnome.IGene Gene { set; get; }

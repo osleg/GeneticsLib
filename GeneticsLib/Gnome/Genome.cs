@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace GeneticsLib.Gnome
 {
+    [Serializable]
     public class Genome
     {
         private List<IGene> genes = new List<IGene>();

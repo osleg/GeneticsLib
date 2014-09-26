@@ -27,10 +27,15 @@ namespace GeneticsLib
             set { connections = value; }
             get { return connections; }
         }
-
+        /// <summary>
+        /// must construct the NN in the constructor
+        /// </summary>
         public Being()
         {
-
+            Layers.Add(new LayerInput(2));
+            Layers.Add(new LayerHidden(2));
+            Layers.Add(new LayerOutput(1));
+            CalculateConnections(typeof(double));
         }
 
         public Being Clone()
@@ -44,10 +49,22 @@ namespace GeneticsLib
             stream.Dispose();
             return temp;
         }
-
-        private void CalculateConnections()
+        /// <summary>
+        /// calculates the synapses between layers
+        /// </summary>
+        /// <param name="T">type of value of the synapse</param>
+        private void CalculateConnections(Type T)
         {
-            throw new NotImplementedException();
+            for (int i = 1; i < Layers.Count; i++)
+            {
+                for (int j = 0; j < Layers[i - 1].Neurons.Count; j++)
+                {
+                    for (int k = 0; k < Layers[i].Neurons.Count; k++)
+                    {
+                        Connections.Add(new SynapseBasic(i, j, k, T));
+                    }
+                }
+            }
         }
 
         public GeneticsLib.Gnome.Genome BreakToGenome()

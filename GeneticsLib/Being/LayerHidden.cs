@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace GeneticsLib
 {
+    [Serializable]
     class LayerHidden:ILayer
     {
         private List<INeuron> neurons = new List<INeuron>();
@@ -18,6 +19,14 @@ namespace GeneticsLib
             set
             {
                 neurons = value;
+            }
+        }
+
+        public LayerHidden(int size)
+        {
+            for (int i = 0; i < size; i++)
+            {
+                Neurons.Add(new NeuronHidden());
             }
         }
 
