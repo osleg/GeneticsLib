@@ -13,4 +13,3 @@ happens because of your direct or indirect use or interaction with my library.
 if you do find it usefull i would like to hear about it. 
 
 for 20/9/2014 the library is not even ready, ill update.
-
