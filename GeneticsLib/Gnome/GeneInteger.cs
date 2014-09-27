@@ -32,5 +32,16 @@ namespace GeneticsLib.Gnome
         {
             return Convert.ToInt32(gene);
         }
+
+
+        public void MutateStrong()
+        {
+            gene = Globals.Rand.Next(10);
+        }
+
+        public void MutateWeak()
+        {
+            gene = ToNumber() + Globals.Rand.Next(3) - 1;
+        }
     }
 }

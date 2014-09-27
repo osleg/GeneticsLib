@@ -29,7 +29,6 @@ namespace GeneticsLib
                     break;
                 default:
                     throw new NotImplementedException();
-                    break;
             }
         }
         public NeuronHidden()

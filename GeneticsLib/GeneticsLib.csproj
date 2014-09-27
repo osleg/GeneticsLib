@@ -40,7 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Being.cs" />
+    <Compile Include="Being\Being.cs" />
     <Compile Include="Being\Enums\FunctionType.cs" />
     <Compile Include="Being\Enums\NeuronType.cs" />
     <Compile Include="Being\Functions\FunctionNone.cs" />
@@ -50,19 +50,24 @@
     <Compile Include="Being\Interfaces\IFunction.cs" />
     <Compile Include="Being\Interfaces\INeuron.cs" />
     <Compile Include="Being\Interfaces\ISynapse.cs" />
-    <Compile Include="Being\LayerHidden.cs" />
-    <Compile Include="Being\LayerInput.cs" />
-    <Compile Include="Being\NeuronHidden.cs" />
-    <Compile Include="Being\NeuronInput.cs" />
-    <Compile Include="Being\NeuronOutput.cs" />
+    <Compile Include="Being\Layers\LayerHidden.cs" />
+    <Compile Include="Being\Layers\LayerInput.cs" />
+    <Compile Include="Being\Neurons\NeuronHidden.cs" />
+    <Compile Include="Being\Neurons\NeuronInput.cs" />
+    <Compile Include="Being\Neurons\NeuronOutput.cs" />
+    <Compile Include="Gnome\GenePool.cs" />
     <Compile Include="Gnome\Genome.cs" />
-    <Compile Include="Gnome\GnomeEnums.cs" />
+    <Compile Include="Gnome\Enums\GnomeEnums.cs" />
     <Compile Include="Gnome\GeneInteger.cs" />
-    <Compile Include="Gnome\IGene.cs" />
-    <Compile Include="Being\LayerOutput.cs" />
+    <Compile Include="Gnome\Interfaces\IGene.cs" />
+    <Compile Include="Being\Layers\LayerOutput.cs" />
+    <Compile Include="Being\Enums\LayerType.cs" />
+    <Compile Include="Population.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SynapseBasic.cs" />
+    <Compile Include="Being\Synapses\SynapseBasic.cs" />
+    <Compile Include="Being\Synapses\SynapseInteger.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -14,6 +14,7 @@ namespace GeneticsLib
         int Position { get; set; }
         int Source { set; get; }
         int Destination { get; set; }
-        dynamic Number { get; set; }
+        GeneticsLib.Gnome.IGene Gene { set; get; }
+        void ChangeGeneType(GeneticsLib.Gnome.GeneType Gen);
     }
 }

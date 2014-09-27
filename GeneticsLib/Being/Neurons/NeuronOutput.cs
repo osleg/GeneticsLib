@@ -7,16 +7,17 @@ using System.Threading.Tasks;
 namespace GeneticsLib
 {
     [Serializable]
-    class NeuronInput:INeuron
-
+    public class NeuronOutput:INeuron//todo remove public
     {
+        public GeneticsLib.Gnome.IGene Gene { set; get; }
+
         public double Sum { set; get; }
 
         public double Reply { set; get; }
 
-        public IFunction Function { get; set; }
+        public IFunction Function { set; get; }
 
-        public NeuronInput(FunctionType Func)
+        public NeuronOutput(FunctionType Func, GeneticsLib.Gnome.GeneType Gen)
         {
             Sum = 0;
             Reply = 0;
@@ -30,19 +31,27 @@ namespace GeneticsLib
                     break;
                 default:
                     throw new NotImplementedException();
+            }
+            switch (Gen)
+            {
+                case Gnome.GeneType.Integer:
+                    Gene = new GeneticsLib.Gnome.GeneInteger();
                     break;
+                default:
+                    throw new NotImplementedException();
             }
         }
-        public NeuronInput()
+        public NeuronOutput()
         {
             Sum = 0;
             Reply = 0;
             Function = new FunctionNone();
+            Gene = new GeneticsLib.Gnome.GeneInteger();
         }
 
         public void Fire()
         {
-            Reply = Function.Calculate(Sum);
+            Reply = Function.Calculate(Sum)*Gene.ToNumber();
         }
 
         public void Nullify()

@@ -15,24 +15,25 @@ namespace GeneticsLib
 
         public int Destination { set; get; }
 
-        public dynamic Number { set; get; }
+        public Gnome.IGene Gene { set; get; }
 
-        public SynapseBasic(int position, int source, int destination,Type T)
+        public SynapseBasic(int position, int source, int destination)
         {
             Position = position;
             Source = source;
             Destination = destination;
-            if (T == typeof(int))
+        }
+
+
+        public void ChangeGeneType(GeneticsLib.Gnome.GeneType Gen)
+        {
+            switch (Gen)
             {
-                Number = new int();
-            }
-            else if (T == typeof(double))
-            {
-                Number = new double();
-            }
-            else
-            {
-                throw new NotImplementedException();
+                case Gnome.GeneType.Integer:
+                    Gene = new GeneticsLib.Gnome.GeneInteger();
+                    break;
+                default:
+                    throw new NotImplementedException();
             }
         }
     }

@@ -28,5 +28,13 @@ namespace GeneticsLib.Gnome
         /// </summary>
         /// <returns></returns>
         dynamic ToNumber();
+        /// <summary>
+        /// mutates the gene in a strong way that is totally diffrent from what it was
+        /// </summary>
+        void MutateStrong();
+        /// <summary>
+        /// slitely mutates the gene, the new value varies a little from the previous one
+        /// </summary>
+        void MutateWeak();
     }
 }
