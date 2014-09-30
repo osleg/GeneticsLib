@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Runtime.Serialization;
+using System.Runtime.Serialization.Formatters.Binary;
+using System.IO;
 
 namespace GeneticsLib.Gnome
 {
@@ -42,6 +45,19 @@ namespace GeneticsLib.Gnome
         public void MutateWeak()
         {
             gene = ToNumber() + Globals.Rand.Next(3) - 1;
+        }
+
+
+        public IGene Clone()
+        {
+            GeneInteger temp = new GeneInteger();
+            IFormatter formatter = new BinaryFormatter();
+            Stream stream = new MemoryStream();
+            formatter.Serialize(stream, this);
+            stream.Position = 0;
+            temp = (GeneInteger)formatter.Deserialize(stream);
+            stream.Dispose();
+            return temp;
         }
     }
 }

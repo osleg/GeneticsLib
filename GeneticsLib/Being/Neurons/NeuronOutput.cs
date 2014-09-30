@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace GeneticsLib
 {
     [Serializable]
-    public class NeuronOutput:INeuron//todo remove public
+    class NeuronOutput:INeuron
     {
         public GeneticsLib.Gnome.IGene Gene { set; get; }
 

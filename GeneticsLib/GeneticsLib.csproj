@@ -55,6 +55,7 @@
     <Compile Include="Being\Neurons\NeuronHidden.cs" />
     <Compile Include="Being\Neurons\NeuronInput.cs" />
     <Compile Include="Being\Neurons\NeuronOutput.cs" />
+    <Compile Include="World\Selectors\FortuneWheel.cs" />
     <Compile Include="Gnome\GenePool.cs" />
     <Compile Include="Gnome\Genome.cs" />
     <Compile Include="Gnome\Enums\GnomeEnums.cs" />
@@ -62,10 +63,12 @@
     <Compile Include="Gnome\Interfaces\IGene.cs" />
     <Compile Include="Being\Layers\LayerOutput.cs" />
     <Compile Include="Being\Enums\LayerType.cs" />
-    <Compile Include="Population.cs" />
+    <Compile Include="World\Interfaces\ISelector.cs" />
+    <Compile Include="World\Population.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Being\Synapses\SynapseBasic.cs" />
     <Compile Include="Being\Synapses\SynapseInteger.cs" />
+    <Compile Include="World\World.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

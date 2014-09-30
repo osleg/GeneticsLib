@@ -19,7 +19,6 @@ namespace Tester
             char[] letters = seq.ToCharArray();
             test.AddLayer(letters.Length, LayerType.Output);
             test.ChangeConnectionType(GeneType.Integer);
-            test.RandomizeGenome();
             Population p = new Population(15, test);
             p.RandomizeGenomes();
             try

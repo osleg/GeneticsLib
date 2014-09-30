@@ -36,5 +36,10 @@ namespace GeneticsLib.Gnome
         /// slitely mutates the gene, the new value varies a little from the previous one
         /// </summary>
         void MutateWeak();
+        /// <summary>
+        /// deep copies the Gene
+        /// </summary>
+        /// <returns>the copy</returns>
+        IGene Clone();
     }
 }
