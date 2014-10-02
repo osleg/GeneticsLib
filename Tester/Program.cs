@@ -5,18 +5,29 @@ using System.Text;
 using System.Threading.Tasks;
 using GeneticsLib;
 using GeneticsLib.Gnome;
-
+using System.Collections;
 namespace Tester
 {
     class Program
     {
-        
+		static char[] CharArray(string s)
+		{
+			int i = 0;
+			char[] temp = new char[s.Length];
+			foreach (char C in s)
+			{
+				temp[i] = C;
+				i++;
+			}
+			return temp;
+		}
+
         static void Main(string[] args)
         {
             Console.WriteLine("write numbers sequence");
             string seq = Console.ReadLine();
             Sequence test = new Sequence();
-            char[] letters = seq.ToCharArray();
+			char[] letters = CharArray(seq);
             test.AddLayer(letters.Length, LayerType.Output);
             test.ChangeConnectionType(GeneType.Integer);
             Population p = new Population(15, test);
